@@ -32,6 +32,6 @@ public class MovementController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        playerRb.velocity = movementInput.normalized * (movementSpeed * Time.fixedDeltaTime);
+        playerRb.linearVelocity = movementInput.normalized * (movementSpeed * Time.fixedDeltaTime);
     }
 }
