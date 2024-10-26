@@ -9,9 +9,12 @@ public class MovementController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 5.0f;
     
-    private Vector2 movementInput;
+    private Vector2 movementInput = Vector2.zero;
     private Rigidbody2D playerRb;
-    
+
+    public Vector2 MovementInput { get { return movementInput; }
+    }
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
