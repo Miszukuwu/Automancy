@@ -48,8 +48,5 @@ TagManager:
   - name: Items
     uniqueID: 3783417873
     locked: 0
-  - name: Characters
-    uniqueID: 2661689875
-    locked: 0
   m_RenderingLayers:
   - Default

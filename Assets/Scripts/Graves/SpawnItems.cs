@@ -15,8 +15,6 @@ public class SpawnItems : MonoBehaviour
     {
         if (GameObject.Find("Items"))
             itemGroup = GameObject.Find("Items");
-        else
-            itemGroup = new GameObject();
     }
 
     void Update()
