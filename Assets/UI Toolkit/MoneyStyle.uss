@@ -1,0 +1,4 @@
+.no-background-field > .unity-text-element {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+}
