@@ -3,7 +3,6 @@ using UnityEngine.UIElements;
 
 public class UIController : MonoBehaviour
 {
-    public int playerMoney = 1000;
     private Label playerMoneyLabel;
     private VisualElement root;
 
@@ -15,7 +14,7 @@ public class UIController : MonoBehaviour
         
         if (playerMoneyLabel != null)
         {
-            playerMoneyLabel.text = playerMoney.ToString();
+            playerMoneyLabel.text = GameManager.playerMoney.ToString();
         }
         else
         {
@@ -25,6 +24,6 @@ public class UIController : MonoBehaviour
 
     void Update()
     {
-        playerMoneyLabel.text = playerMoney.ToString();
+        playerMoneyLabel.text = GameManager.playerMoney.ToString();
     }
 }
