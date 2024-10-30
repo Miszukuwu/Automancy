@@ -8,7 +8,8 @@ public class SpawnItems : MonoBehaviour
 
     private float timer = 0;
     private GameObject itemGroup;
-    [SerializeField] private float timeBetweenItemSpawn = 5;
+    private GraveInteraction graveInteractionScript;
+    public float timeBetweenItemSpawn = 5;
     [SerializeField] private GameObject item;
 
     private void Start()
@@ -17,14 +18,15 @@ public class SpawnItems : MonoBehaviour
             itemGroup = GameObject.Find("Items");
         else
             itemGroup = new GameObject();
+        graveInteractionScript = gameObject.GetComponent<GraveInteraction>();
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if(timer >= timeBetweenItemSpawn) {
-            GameObject newItem = Instantiate(item, transform.position, transform.rotation, itemGroup.transform);
+        if(timer >= timeBetweenItemSpawn && graveInteractionScript.graveLevel != 0) {
+            GameObject newItem = Instantiate(item, transform.position - new Vector3(0, 1.2f, 0), transform.rotation, itemGroup.transform);
             timer = 0;
         }
     }
