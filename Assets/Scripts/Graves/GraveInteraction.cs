@@ -22,8 +22,15 @@ public class GraveInteraction : MonoBehaviour, Interactable
         {
             spawnItemsScript.timeBetweenItemSpawn -= 2;
         }
-        
-        GameManager.playerMoney -= graveLevel * 250;
+
+        switch (graveLevel)
+        {
+            case 1: GameManager.playerMoney -= 75; break;
+            case 2: GameManager.playerMoney -= 200; break;
+            case 3: GameManager.playerMoney -= 500; break;
+        }
+
+        Debug.Log(GameManager.playerMoney);
     }
     public void Interact()
     {

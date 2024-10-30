@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static int playerMoney = 1000;
+    public static int playerMoney = 100;
     public static bool isUiOpen = false;
     public static Sprite[] graveSprites;
 
