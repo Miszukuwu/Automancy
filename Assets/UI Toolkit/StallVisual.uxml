@@ -1,0 +1,15 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/StallStyle.uss?fileID=7433441132597879392&amp;guid=e689c9b2d77a04148909324d919b6828&amp;type=3#StallStyle" />
+    <engine:VisualElement name="Background" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/UI/UI%20books%20&amp;%20more.png?fileID=-8399763048273731415&amp;guid=8a391e4a75e4c2743aa057d41ae80841&amp;type=3#UI books &amp; more_11&quot;); width: 1000px; -unity-background-scale-mode: scale-to-fit; align-self: center;" />
+    <engine:VisualElement name="Container" style="flex-grow: 1; height: 150px; width: 800px; align-self: center; justify-content: center; position: absolute; top: 66px; left: 560px;">
+        <engine:Label text="Stall" name="StallName" class="header" style="font-size: 40px; height: auto;" />
+    </engine:VisualElement>
+    <engine:VisualElement name="BuyContainer" style="flex-grow: 1; align-content: center; justify-content: center; align-items: center; width: 428px; position: absolute; top: 299px; left: 1006px;">
+        <engine:Label text="Currently owned upgrades: 0&#10;" name="BuyLabel" class="header" />
+        <engine:Button text="Buy" name="BuyButton" />
+    </engine:VisualElement>
+    <engine:VisualElement name="SellContainer" style="flex-grow: 1; align-self: auto; align-content: center; justify-content: center; align-items: center; width: 428px; position: absolute; top: 298px; left: 518px;">
+        <engine:Label text="Current stash value: 0" name="SellLabel" class="header" />
+        <engine:Button text="Sell" data-source-path="SellButton" />
+    </engine:VisualElement>
+</engine:UXML>
