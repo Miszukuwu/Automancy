@@ -3,29 +3,15 @@ using UnityEngine.UIElements;
 
 public class UIController : MonoBehaviour
 {
-    public int playerMoney = 1000;
+    public int playerMoney = 1000; // Przyk³adowa wartoœæ pieniêdzy gracza
 
-    private Label playerMoneyLabel;
-    private VisualElement root;
-
-    void Start()
+    private void OnEnable()
     {
-        root = GetComponent<UIDocument>().rootVisualElement;
+        var root = GetComponent<UIDocument>().rootVisualElement;
+        IntegerField playerMoneyField = root.Q<IntegerField>("playerMoneyField");
+        playerMoneyField.value = playerMoney;
 
-        playerMoneyLabel = root.Q<Label>("Label");
-        
-        if (playerMoneyLabel != null)
-        {
-            playerMoneyLabel.text = playerMoney.ToString();
-        }
-        else
-        {
-            Debug.LogError("Label with name 'Label' not found.");
-        }
-    }
-
-    void Update()
-    {
-        playerMoneyLabel.text = playerMoney.ToString();
+        // Mo¿esz dodaæ listener, aby zaktualizowaæ wartoœæ playerMoney po ka¿dej zmianie w UI
+        playerMoneyField.RegisterValueChangedCallback(evt => playerMoney = evt.newValue);
     }
 }
