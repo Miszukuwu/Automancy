@@ -1,26 +1,29 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Script.Player
 {
+    [RequireComponent(typeof(InputReceiver))]
     public class InteractionController : MonoBehaviour 
     {
         [SerializeField] private float interactionReach = 1.0f;
-        
-        private bool isInteractPressed;
-        
-        /// <summary>
-        /// Gets the player's input for interaction.
-        /// </summary>
-        void getInput()
+        private InputReceiver inputReceiver;
+
+        private void Start()
         {
-            isInteractPressed = Input.GetButtonDown("Interact");
+            inputReceiver = GetComponent<InputReceiver>();
         }
-        
+
+        private bool isInteractPressed {
+            get { return inputReceiver.isInteractPressed; }
+        }
+        private Vector2 currentDirection {
+            get { return inputReceiver.currentDirection; }
+        }
         private void Update()
         {
-            getInput();
-            if (isInteractPressed) {
+            if (isInteractPressed && !GameManager.isUiOpen) {
                 Debug.Log("Interact button pressed");
                 Interact();
             }
@@ -33,10 +36,11 @@ namespace Script.Player
         private void Interact()
         {
             int layerMask = LayerMask.GetMask("Interactable");
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, interactionReach, layerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, currentDirection, interactionReach, layerMask);
             
             if (hit.collider == null) {
                 Debug.Log("Didn't hit anything");
+                Debug.Log(currentDirection);
                 return;
             }
             

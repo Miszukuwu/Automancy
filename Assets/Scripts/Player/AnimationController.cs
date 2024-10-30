@@ -10,24 +10,25 @@ namespace Script.Player
         private readonly int _movement = Animator.StringToHash("Movement");
         
         private Animator animator;
-        private MovementController movementController;
+        private InputReceiver inputReceiver;
         private SpriteRenderer spriteRenderer;
+        private Vector2 movementInput => inputReceiver.MovementInput;
         
         void Start()
         {
             animator = GetComponent<Animator>();
-            movementController = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>();
+            inputReceiver = GameObject.FindGameObjectWithTag("Player").GetComponent<InputReceiver>();
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         void Update()
         {
-            animator.SetFloat(_horizontalMovement, Math.Abs(movementController.MovementInput.x)); 
-            animator.SetFloat(_verticalMovement, movementController.MovementInput.y);
-            animator.SetFloat(_movement, movementController.MovementInput.sqrMagnitude);
-            if (movementController.MovementInput.x < 0) {
+            animator.SetFloat(_horizontalMovement, Math.Abs(movementInput.x)); 
+            animator.SetFloat(_verticalMovement, movementInput.y);
+            animator.SetFloat(_movement, movementInput.sqrMagnitude);
+            if (movementInput.x < 0) {
                 spriteRenderer.flipX = true;
-            } else if (movementController.MovementInput.x > 0) {
+            } else if (movementInput.x > 0) {
                 spriteRenderer.flipX = false;
             }
         }
