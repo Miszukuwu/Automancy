@@ -17,4 +17,5 @@
         <engine:VisualElement name="Pumpkin" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Misc/Pumpkin.aseprite?fileID=6388999375599185642&amp;guid=ae9d112c585669a429347b319ec1b9ea&amp;type=3#Pumpkin&quot;); width: 25px; height: 25px; position: absolute; top: 126px; left: 291px;" />
         <engine:Label text="Unlocked upgrade level: 0&#10;" name="BuyLabel" class="header" />
     </engine:VisualElement>
+    <engine:Button text="&#10;" name="CloseButton" style="background-image: url(&quot;project://database/Assets/Sprites/UI/UI%20books%20&amp;%20more.png?fileID=4622496822143911329&amp;guid=8a391e4a75e4c2743aa057d41ae80841&amp;type=3#UI books &amp; more_114&quot;); background-color: rgba(188, 188, 188, 0); -unity-background-image-tint-color: rgb(255, 255, 255); width: 50px; height: 50px; position: absolute; top: 240px; left: 1374px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
 </engine:UXML>
