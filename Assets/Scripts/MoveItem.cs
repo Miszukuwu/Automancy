@@ -10,6 +10,8 @@ public class MoveItem : MonoBehaviour
     private GameObject targetObject;
     private MarketStall marketStallScript;
     private Sprite[] itemSprites;
+    [SerializeField] private int itemPrice = 10;
+    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -25,7 +27,7 @@ public class MoveItem : MonoBehaviour
         transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
         if (agent.remainingDistance <= 0.1)
         {
-            marketStallScript.addStashedItem();
+            GameManager.playerMoney += itemPrice;
             Destroy(gameObject);
         }
     }
