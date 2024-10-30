@@ -9,11 +9,15 @@ public class MoveItem : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject targetObject;
     private ZombieAssembler zombieAssemblerScript;
+    private Sprite[] itemSprites;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         targetObject = GameObject.FindGameObjectWithTag("Stash");
         agent.destination = targetObject.transform.position;
+        
+        itemSprites = Resources.LoadAll<Sprite>("Items");
+        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = itemSprites[UnityEngine.Random.Range(0, itemSprites.Length)];
     }
     void Update()
     {
