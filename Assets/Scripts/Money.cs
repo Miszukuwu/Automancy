@@ -11,7 +11,7 @@ public class UIController : MonoBehaviour
     {
         root = GetComponent<UIDocument>().rootVisualElement;
 
-        playerMoneyLabel = root.Q<Label>("Label");
+        playerMoneyLabel = root.Q<Label>("MoneyLabel");
         
         if (playerMoneyLabel != null)
         {
