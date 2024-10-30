@@ -9,7 +9,7 @@ public class MoveItem : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject targetObject;
     private MarketStall marketStallScript;
-    [SerializeField] private int itemPrice = 10;
+    [SerializeField] private int itemPrice = 5;
     private Sprite[] itemSprites;
     void Start()
     {
