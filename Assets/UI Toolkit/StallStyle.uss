@@ -2,4 +2,5 @@
     font-size: 20px;
     color: rgb(0, 0, 0);
     -unity-text-align: upper-center;
+    -unity-font-definition: url("project://database/Assets/Fonts/FFFFORWA.TTF?fileID=12800000&guid=ef30121316e14874bbd60b6e6cb06b9a&type=3#FFFFORWA");
 }
