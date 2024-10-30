@@ -4,7 +4,6 @@ using UnityEngine.UIElements;
 public class UIController : MonoBehaviour
 {
     public int playerMoney = 1000;
-
     private Label playerMoneyLabel;
     private VisualElement root;
 
