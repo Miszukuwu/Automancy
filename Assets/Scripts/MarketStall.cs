@@ -1,6 +1,16 @@
+using Script;
 using UnityEngine;
 
-public class MarketStall : MonoBehaviour
+public class MarketStall : MonoBehaviour, Interactable
 {
-    [HideInInspector] public int amountOfStashedItems = 0;
+    public void Interact() 
+    {
+        Debug.Log("Interacted with Market Stall");
+    }
+    private int amountOfStashedItems = 0;
+    public void addStashedItem() 
+    {
+        amountOfStashedItems++;
+    }
+    
 }

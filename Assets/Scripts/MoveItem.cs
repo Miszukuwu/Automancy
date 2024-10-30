@@ -10,7 +10,6 @@ public class MoveItem : MonoBehaviour
     private GameObject targetObject;
     private MarketStall marketStallScript;
     [SerializeField] private int itemPrice = 10;
-    private ZombieAssembler zombieAssemblerScript;
     private Sprite[] itemSprites;
     void Start()
     {
@@ -27,7 +26,7 @@ public class MoveItem : MonoBehaviour
         transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
         if (agent.remainingDistance <= 0.1)
         {
-            marketStallScript.amountOfStashedItems++;
+            marketStallScript.addStashedItem();
             Destroy(gameObject);
         }
     }

@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 6025057794425171429}
   - component: {fileID: 7912190424133339331}
   - component: {fileID: -1499248512886524497}
-  - component: {fileID: 7610181450710142832}
   - component: {fileID: 749019101465868356}
   m_Layer: 0
   m_Name: Item
@@ -157,22 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f28eaedda2e774e859461ee563bcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!111 &7610181450710142832
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5545902020318716211}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 900acb53a8465fe44b027586e7e0eedd, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
+  itemPrice: 10
 --- !u!95 &749019101465868356
 Animator:
   serializedVersion: 7

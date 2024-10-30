@@ -4,33 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(InputReceiver))]
 [SelectionBase]
 public class MovementController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 5.0f;
-    
-    private Vector2 movementInput = Vector2.zero;
-    private Rigidbody2D playerRb;
-
-    public Vector2 MovementInput { get { return movementInput; }
+    private Vector2 movementInput {
+        get { return inputReceiver.MovementInput; }
     }
+
+    private Rigidbody2D playerRb;
+    private InputReceiver inputReceiver;
 
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
-    }
-
-    /// <summary>
-    /// Gets the player's movement input from the Input system.
-    /// </summary>
-    void getInput()
-    {
-        movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-    }
-    
-    void Update()
-    {
-        getInput();
+        inputReceiver = GetComponent<InputReceiver>();
     }
     
     private void FixedUpdate()
