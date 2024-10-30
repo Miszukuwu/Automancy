@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7edd776d7914bfd488896262e2894c85
+guid: 917bd88e3fe5c114c93f0400403076ff
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638659144835144151
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,9 +122,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: grave_hole_Lvl3_tilemap
+  - name: grave_hole_Lvl1_tilemap
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.48, y: -0.15}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 48
-      height: 48
-    spriteID: 331786e35d3d59e42aad4bf2c9f676d5
+      width: 25
+      height: 40
+    spriteID: 7d0c89e0d31288e44a1bd44d9ff3ca6b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -146,21 +146,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -201998977
-    name: grave_hole_Lvl3_tilemap
+    guid: -1088229223
+    name: grave_hole_Lvl1_tilemap
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: grave_hole_Lvl3_tilemap
+    - name: grave_hole_Lvl1_tilemap
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 48
-        height: 48
-      spriteId: 331786e35d3d59e42aad4bf2c9f676d5
+        x: 12
+        y: 6
+        width: 25
+        height: 40
+      spriteId: 7d0c89e0d31288e44a1bd44d9ff3ca6b
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -171,6 +171,30 @@ ScriptedImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
