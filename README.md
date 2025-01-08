@@ -1,6 +1,9 @@
-Kiedy funkcja jest gotowa wpisać `x` do nawiasów, Kto pracuje nad daną funkcją proszę się wpisywać 
-- [ ] Poruszająca się postać => Miszuk
-- [ ] Waluta do płacenia i pozyskiwania => Kuba
-- [ ] Groby generują przedmioty, Upgrady grobów => Karmel
-- [ ] Conveyor belts do przenoszenia przedmiotów => CompactRex66
-- [ ] Stash do przechowywania przedmiotów 
+https://miszuk.itch.io/automancy
+
+The goal of the game is to hoard as much money as possible.
+You can do this by selling body parts and other things found in graves
+Press Interact on a grave to start earning money,
+when you gather enough, you can upgrade them.
+
+Credits:
+music - Alexander Nakarada
